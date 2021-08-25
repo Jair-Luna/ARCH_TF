@@ -9,7 +9,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2 position-sticky bd-subnavar">
         @*<div class="container-fluid">
 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -37,23 +37,28 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home", new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home", new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home", new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Inicio", "Index", "Home", null, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Acerca de", "About", "Home", null, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home", null, new { @class = "nav-link" })</li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="/Home/Logout">Cerrar Sesion</a></li>
+                    }
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid bg-dark bg-opacity-10">
-        <div class="container-fluid">
+    <div class="container-fluid dropdown h-100 bg-black bg-opacity-10 back-img">
+        <div class="container-fluid position-sticky">
             @RenderBody()
-            <hr />
+        </div>
+        @*<hr />
             <footer>
                 <p class="m-0">&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-            </footer>
-        </div>
+            </footer>*@
     </div>
+
 
 
     @Scripts.Render("~/bundles/jquery")

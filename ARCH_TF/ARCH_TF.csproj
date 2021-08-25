@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\estado_cocheController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -227,9 +228,11 @@
     <Content Include="Content\js\bootstrap.esm.min.js" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\background.jpg" />
     <Content Include="Images\logo.png" />
     <Content Include="Models\Hidrocarburos.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -388,6 +391,7 @@
     <Content Include="Views\estado_coche\Details.cshtml" />
     <Content Include="Views\estado_coche\Edit.cshtml" />
     <Content Include="Views\estado_coche\Index.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
