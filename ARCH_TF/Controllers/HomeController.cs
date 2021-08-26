@@ -20,14 +20,14 @@ namespace ARCH_TF.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Actuar y cumplir su misión con equidad.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Página para contactarnos.";
 
             return View();
         }
