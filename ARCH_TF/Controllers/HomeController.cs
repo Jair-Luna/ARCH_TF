@@ -38,7 +38,7 @@ namespace ARCH_TF.Controllers
             if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
             {
                 DB_HidrocarburosEntities db = new DB_HidrocarburosEntities();
-                var user = db.usuario.FirstOrDefault(e => e.email == email && e.contraseña_usuario == password);
+                var user = db.usuario.FirstOrDefault(e => e.email == email && e.contrasenia_usuario == password);
 
                 if(user != null)
                 {

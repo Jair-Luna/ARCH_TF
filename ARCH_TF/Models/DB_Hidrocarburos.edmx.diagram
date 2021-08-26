@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ed6cd9a6519c4fc5a5f18343f0301071" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.asignacion_ruta" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.coche_repartidor" Width="1.5" PointX="1.5" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.creacion_usuario" Width="1.5" PointX="10.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.empleado" Width="1.5" PointX="3.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.estado_coche" Width="1.5" PointX="1.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.estado_formulario" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.form_registro" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.formularios" Width="1.5" PointX="15" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.ing_hidrocarburos" Width="1.5" PointX="1.5" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.proceso_registro" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.repartidor" Width="1.5" PointX="3.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.ruta_ciudad" Width="1.5" PointX="6" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.tipo_empleado" Width="1.5" PointX="1.5" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.tipo_formulario" Width="1.5" PointX="12.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.usuario" Width="1.5" PointX="12.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.zona_ciudad" Width="1.5" PointX="3.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HidrocarburosModel.proceso_formularios" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_asignacion_cregistro" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_asignacion_empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_asignacion_ruta" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_Ausuario_ruta" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_coche_estado" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_repartidor_coche" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_Ausuario_registro" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_usuario_creacion" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_empleado_tipo" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_procesos_empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_registro_empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_procesos_estado" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_registro_estado" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_registro_formulario" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_form_tipo" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_form_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_procesos_form" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_repartidor_ingAsignado" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_ruta_repartidor" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HidrocarburosModel.fk_ruta_zona" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

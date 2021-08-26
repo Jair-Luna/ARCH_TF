@@ -21,7 +21,7 @@ namespace ARCH_TF.Models
         }
     
         public string cedula_usuario { get; set; }
-        public string contraseña_usuario { get; set; }
+        public string contrasenia_usuario { get; set; }
         public string nombres { get; set; }
         public string apellido_paterno { get; set; }
         public string apellido_materno { get; set; }
