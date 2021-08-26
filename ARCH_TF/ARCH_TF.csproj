@@ -129,79 +129,80 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\estado_cocheController.cs" />
+    <Compile Include="Controllers\form_registroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\asignacion_ruta.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\coche_repartidor.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\creacion_usuario.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB_Hidrocarburos.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_Hidrocarburos.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB_Hidrocarburos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB_Hidrocarburos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_Hidrocarburos.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\empleado.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\estado_coche.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\estado_formulario.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\formularios.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\form_registro.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Hidrocarburos.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Hidrocarburos.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Hidrocarburos.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Hidrocarburos.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Hidrocarburos.edmx</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ing_hidrocarburos.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\proceso_formularios.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\proceso_registro.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\repartidor.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ruta_ciudad.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tipo_empleado.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tipo_formulario.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\usuario.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\zona_ciudad.cs">
-      <DependentUpon>Hidrocarburos.tt</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -234,25 +235,18 @@
     <Content Include="Global.asax" />
     <Content Include="Images\background.jpg" />
     <Content Include="Images\logo.png" />
-    <Content Include="Models\Hidrocarburos.Context.tt">
+    <Content Include="Models\DB_Hidrocarburos.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Hidrocarburos.Context.cs</LastGenOutput>
-      <DependentUpon>Hidrocarburos.edmx</DependentUpon>
+      <DependentUpon>DB_Hidrocarburos.edmx</DependentUpon>
+      <LastGenOutput>DB_Hidrocarburos.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Hidrocarburos.tt">
+    <Content Include="Models\DB_Hidrocarburos.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Hidrocarburos.edmx</DependentUpon>
-      <LastGenOutput>Hidrocarburos.cs</LastGenOutput>
+      <DependentUpon>DB_Hidrocarburos.edmx</DependentUpon>
+      <LastGenOutput>DB_Hidrocarburos.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Hidrocarburos.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Hidrocarburos.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Hidrocarburos.edmx.diagram">
-      <DependentUpon>Hidrocarburos.edmx</DependentUpon>
-    </Content>
     <Content Include="libman.json" />
     <Content Include="Content\css\bootstrap-grid.css.map" />
     <Content Include="Content\css\bootstrap-grid.min.css.map" />
@@ -361,6 +355,13 @@
     <Content Include="Content\scss\mixins\_visually-hidden.scss" />
     <Content Include="Content\scss\utilities\_api.scss" />
     <Content Include="Content\scss\vendor\_rfs.scss" />
+    <EntityDeploy Include="Models\DB_Hidrocarburos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB_Hidrocarburos.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DB_Hidrocarburos.edmx.diagram">
+      <DependentUpon>DB_Hidrocarburos.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -392,6 +393,7 @@
     <Content Include="Views\estado_coche\Edit.cshtml" />
     <Content Include="Views\estado_coche\Index.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\form_registro\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

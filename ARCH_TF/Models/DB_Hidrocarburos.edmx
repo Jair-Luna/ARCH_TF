@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DB_HidrocarburosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="asignacion_ruta">
           <Key>
             <PropertyRef Name="id_proceso_asignacion" />
@@ -39,8 +39,8 @@
           <Key>
             <PropertyRef Name="id_empleado" />
           </Key>
-          <Property Name="id_empleado" Type="int" Nullable="false" />
-          <Property Name="contraseña" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="id_empleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="contrasenia_empleado" Type="varchar" MaxLength="16" Nullable="false" />
           <Property Name="cedula_empleado" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="nombres_empleado" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="apellido_paterno" Type="varchar" MaxLength="20" Nullable="false" />
@@ -65,7 +65,7 @@
           <Key>
             <PropertyRef Name="id_registro" />
           </Key>
-          <Property Name="id_registro" Type="int" Nullable="false" />
+          <Property Name="id_registro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="cedula" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="nombres" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="apellido_paterno" Type="varchar" MaxLength="20" Nullable="false" />
@@ -79,7 +79,7 @@
           <Key>
             <PropertyRef Name="id_form" />
           </Key>
-          <Property Name="id_form" Type="int" Nullable="false" />
+          <Property Name="id_form" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="cedula_usuario" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="tipo_formulario" Type="int" Nullable="false" />
           <Property Name="descripcion" Type="text" Nullable="false" />
@@ -88,7 +88,7 @@
           <Key>
             <PropertyRef Name="id_ingeniero" />
           </Key>
-          <Property Name="id_ingeniero" Type="int" Nullable="false" />
+          <Property Name="id_ingeniero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="cedula_ingeniero" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="nombres_ingeniero" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="apellido_paterno" Type="varchar" MaxLength="20" Nullable="false" />
@@ -122,7 +122,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
           <Key>
             <PropertyRef Name="id_repartidor" />
           </Key>
-          <Property Name="id_repartidor" Type="int" Nullable="false" />
+          <Property Name="id_repartidor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="cedula_repartidor" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="nombres_repartidor" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="apellido_paterno" Type="varchar" MaxLength="20" Nullable="false" />
@@ -155,7 +155,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             <PropertyRef Name="id_tipoEmpleado" />
           </Key>
           <Property Name="id_tipoEmpleado" Type="int" Nullable="false" />
-          <Property Name="nombre_tipo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="nombre_tipo" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="tipo_formulario">
           <Key>
@@ -169,7 +169,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             <PropertyRef Name="cedula_usuario" />
           </Key>
           <Property Name="cedula_usuario" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="contraseña_usuario" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="contrasenia_usuario" Type="varchar" MaxLength="16" Nullable="false" />
           <Property Name="nombres" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="apellido_paterno" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="apellido_materno" Type="varchar" MaxLength="20" Nullable="false" />
@@ -427,7 +427,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ModelsStoreContainer">
+        <EntityContainer Name="DB_HidrocarburosModelStoreContainer">
           <EntitySet Name="asignacion_ruta" EntityType="Self.asignacion_ruta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="coche_repartidor" EntityType="Self.coche_repartidor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="creacion_usuario" EntityType="Self.creacion_usuario" Schema="dbo" store:Type="Tables" />
@@ -538,7 +538,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DB_HidrocarburosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="asignacion_ruta">
           <Key>
             <PropertyRef Name="id_proceso_asignacion" />
@@ -582,8 +582,8 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
           <Key>
             <PropertyRef Name="id_empleado" />
           </Key>
-          <Property Name="id_empleado" Type="Int32" Nullable="false" />
-          <Property Name="contraseña" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_empleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="contrasenia_empleado" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="cedula_empleado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nombres_empleado" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="apellido_paterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
@@ -615,7 +615,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
           <Key>
             <PropertyRef Name="id_registro" />
           </Key>
-          <Property Name="id_registro" Type="Int32" Nullable="false" />
+          <Property Name="id_registro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="cedula" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nombres" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="apellido_paterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
@@ -630,7 +630,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
           <Key>
             <PropertyRef Name="id_form" />
           </Key>
-          <Property Name="id_form" Type="Int32" Nullable="false" />
+          <Property Name="id_form" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="cedula_usuario" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="tipo_formulario" Type="Int32" Nullable="false" />
           <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
@@ -642,7 +642,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
           <Key>
             <PropertyRef Name="id_ingeniero" />
           </Key>
-          <Property Name="id_ingeniero" Type="Int32" Nullable="false" />
+          <Property Name="id_ingeniero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="cedula_ingeniero" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nombres_ingeniero" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="apellido_paterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
@@ -668,7 +668,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
           <Key>
             <PropertyRef Name="id_repartidor" />
           </Key>
-          <Property Name="id_repartidor" Type="Int32" Nullable="false" />
+          <Property Name="id_repartidor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="cedula_repartidor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nombres_repartidor" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="apellido_paterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
@@ -707,7 +707,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             <PropertyRef Name="id_tipoEmpleado" />
           </Key>
           <Property Name="id_tipoEmpleado" Type="Int32" Nullable="false" />
-          <Property Name="nombre_tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre_tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="empleado" Relationship="Self.fk_empleado_tipo" FromRole="tipo_empleado" ToRole="empleado" />
         </EntityType>
         <EntityType Name="tipo_formulario">
@@ -723,7 +723,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             <PropertyRef Name="cedula_usuario" />
           </Key>
           <Property Name="cedula_usuario" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="contraseña_usuario" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="contrasenia_usuario" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nombres" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="apellido_paterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="apellido_materno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1104,9 +1104,9 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="DB_HidrocarburosEntities">
+        <EntityContainerMapping StorageEntityContainer="DB_HidrocarburosModelStoreContainer" CdmEntityContainer="DB_HidrocarburosEntities">
           <EntitySetMapping Name="asignacion_ruta">
-            <EntityTypeMapping TypeName="Models.asignacion_ruta">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.asignacion_ruta">
               <MappingFragment StoreEntitySet="asignacion_ruta">
                 <ScalarProperty Name="id_proceso_asignacion" ColumnName="id_proceso_asignacion" />
                 <ScalarProperty Name="cod_ruta" ColumnName="cod_ruta" />
@@ -1117,7 +1117,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="coche_repartidor">
-            <EntityTypeMapping TypeName="Models.coche_repartidor">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.coche_repartidor">
               <MappingFragment StoreEntitySet="coche_repartidor">
                 <ScalarProperty Name="id_coche" ColumnName="id_coche" />
                 <ScalarProperty Name="marca" ColumnName="marca" />
@@ -1129,7 +1129,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="creacion_usuario">
-            <EntityTypeMapping TypeName="Models.creacion_usuario">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.creacion_usuario">
               <MappingFragment StoreEntitySet="creacion_usuario">
                 <ScalarProperty Name="id_proceso_usuario" ColumnName="id_proceso_usuario" />
                 <ScalarProperty Name="cod_registro" ColumnName="cod_registro" />
@@ -1139,10 +1139,10 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="empleado">
-            <EntityTypeMapping TypeName="Models.empleado">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.empleado">
               <MappingFragment StoreEntitySet="empleado">
                 <ScalarProperty Name="id_empleado" ColumnName="id_empleado" />
-                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="contrasenia_empleado" ColumnName="contrasenia_empleado" />
                 <ScalarProperty Name="cedula_empleado" ColumnName="cedula_empleado" />
                 <ScalarProperty Name="nombres_empleado" ColumnName="nombres_empleado" />
                 <ScalarProperty Name="apellido_paterno" ColumnName="apellido_paterno" />
@@ -1152,7 +1152,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="estado_coche">
-            <EntityTypeMapping TypeName="Models.estado_coche">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.estado_coche">
               <MappingFragment StoreEntitySet="estado_coche">
                 <ScalarProperty Name="id_estado_coche" ColumnName="id_estado_coche" />
                 <ScalarProperty Name="nombre_estado" ColumnName="nombre_estado" />
@@ -1160,7 +1160,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="estado_formulario">
-            <EntityTypeMapping TypeName="Models.estado_formulario">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.estado_formulario">
               <MappingFragment StoreEntitySet="estado_formulario">
                 <ScalarProperty Name="id_estado" ColumnName="id_estado" />
                 <ScalarProperty Name="nombre_estado" ColumnName="nombre_estado" />
@@ -1168,7 +1168,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="form_registro">
-            <EntityTypeMapping TypeName="Models.form_registro">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.form_registro">
               <MappingFragment StoreEntitySet="form_registro">
                 <ScalarProperty Name="id_registro" ColumnName="id_registro" />
                 <ScalarProperty Name="cedula" ColumnName="cedula" />
@@ -1183,7 +1183,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="formularios">
-            <EntityTypeMapping TypeName="Models.formularios">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.formularios">
               <MappingFragment StoreEntitySet="formularios">
                 <ScalarProperty Name="id_form" ColumnName="id_form" />
                 <ScalarProperty Name="cedula_usuario" ColumnName="cedula_usuario" />
@@ -1193,7 +1193,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ing_hidrocarburos">
-            <EntityTypeMapping TypeName="Models.ing_hidrocarburos">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.ing_hidrocarburos">
               <MappingFragment StoreEntitySet="ing_hidrocarburos">
                 <ScalarProperty Name="id_ingeniero" ColumnName="id_ingeniero" />
                 <ScalarProperty Name="cedula_ingeniero" ColumnName="cedula_ingeniero" />
@@ -1204,7 +1204,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="proceso_registro">
-            <EntityTypeMapping TypeName="Models.proceso_registro">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.proceso_registro">
               <MappingFragment StoreEntitySet="proceso_registro">
                 <ScalarProperty Name="id_proceso" ColumnName="id_proceso" />
                 <ScalarProperty Name="id_empleado" ColumnName="id_empleado" />
@@ -1215,7 +1215,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="repartidor">
-            <EntityTypeMapping TypeName="Models.repartidor">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.repartidor">
               <MappingFragment StoreEntitySet="repartidor">
                 <ScalarProperty Name="id_repartidor" ColumnName="id_repartidor" />
                 <ScalarProperty Name="cedula_repartidor" ColumnName="cedula_repartidor" />
@@ -1228,7 +1228,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ruta_ciudad">
-            <EntityTypeMapping TypeName="Models.ruta_ciudad">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.ruta_ciudad">
               <MappingFragment StoreEntitySet="ruta_ciudad">
                 <ScalarProperty Name="cod_ruta" ColumnName="cod_ruta" />
                 <ScalarProperty Name="repartidor" ColumnName="repartidor" />
@@ -1239,7 +1239,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="Models.sysdiagrams">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -1250,7 +1250,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tipo_empleado">
-            <EntityTypeMapping TypeName="Models.tipo_empleado">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.tipo_empleado">
               <MappingFragment StoreEntitySet="tipo_empleado">
                 <ScalarProperty Name="id_tipoEmpleado" ColumnName="id_tipoEmpleado" />
                 <ScalarProperty Name="nombre_tipo" ColumnName="nombre_tipo" />
@@ -1258,7 +1258,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tipo_formulario">
-            <EntityTypeMapping TypeName="Models.tipo_formulario">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.tipo_formulario">
               <MappingFragment StoreEntitySet="tipo_formulario">
                 <ScalarProperty Name="id_tipo_form" ColumnName="id_tipo_form" />
                 <ScalarProperty Name="nombre_tipo_form" ColumnName="nombre_tipo_form" />
@@ -1266,10 +1266,10 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="usuario">
-            <EntityTypeMapping TypeName="Models.usuario">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.usuario">
               <MappingFragment StoreEntitySet="usuario">
                 <ScalarProperty Name="cedula_usuario" ColumnName="cedula_usuario" />
-                <ScalarProperty Name="contraseña_usuario" ColumnName="contraseña_usuario" />
+                <ScalarProperty Name="contrasenia_usuario" ColumnName="contrasenia_usuario" />
                 <ScalarProperty Name="nombres" ColumnName="nombres" />
                 <ScalarProperty Name="apellido_paterno" ColumnName="apellido_paterno" />
                 <ScalarProperty Name="apellido_materno" ColumnName="apellido_materno" />
@@ -1282,7 +1282,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="zona_ciudad">
-            <EntityTypeMapping TypeName="Models.zona_ciudad">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.zona_ciudad">
               <MappingFragment StoreEntitySet="zona_ciudad">
                 <ScalarProperty Name="cod_zona" ColumnName="cod_zona" />
                 <ScalarProperty Name="nombre_zona" ColumnName="nombre_zona" />
@@ -1291,7 +1291,7 @@ advertencia 6002: La tabla o vista 'DB_Hidrocarburos.dbo.proceso_formularios' no
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="proceso_formularios">
-            <EntityTypeMapping TypeName="Models.proceso_formularios">
+            <EntityTypeMapping TypeName="DB_HidrocarburosModel.proceso_formularios">
               <MappingFragment StoreEntitySet="proceso_formularios">
                 <ScalarProperty Name="id_form" ColumnName="id_form" />
                 <ScalarProperty Name="empleado" ColumnName="empleado" />

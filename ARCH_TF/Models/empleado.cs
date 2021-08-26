@@ -23,7 +23,7 @@ namespace ARCH_TF.Models
         }
     
         public int id_empleado { get; set; }
-        public string contraseña { get; set; }
+        public string contrasenia_empleado { get; set; }
         public string cedula_empleado { get; set; }
         public string nombres_empleado { get; set; }
         public string apellido_paterno { get; set; }
