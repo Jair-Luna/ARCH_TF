@@ -37,6 +37,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav">
+
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Inicio", "Index", "Usuario", null, new { @class = "nav-link" })</li>
