@@ -47,3 +47,7 @@ textarea {
     z-index: 1020;
     top: 0;
 }
+
+.bd-navbar {
+    padding: .75rem 0;
+}

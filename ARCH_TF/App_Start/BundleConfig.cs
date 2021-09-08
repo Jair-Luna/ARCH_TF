@@ -23,7 +23,7 @@ namespace ARCH_TF
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/css/bootstrap.css",
+                      "~/Content/css/bootstrap.min.css",
                       "~/Content/site.css"));
         }
     }
