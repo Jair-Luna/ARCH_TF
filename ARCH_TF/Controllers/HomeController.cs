@@ -37,11 +37,19 @@ namespace ARCH_TF.Controllers
             {
                 DB_HidrocarburosEntities db = new DB_HidrocarburosEntities();
                 var user = db.usuario.FirstOrDefault(e => e.email == email && e.contrasenia_usuario == password);
+                var emple = db.empleado.FirstOrDefault(a => a.cedula_empleado == email && a.contrasenia_empleado == password);
 
-                if(user != null)
+
+
+                if (user != null)
                 {
                     FormsAuthentication.SetAuthCookie(user.email, true);
                     return RedirectToAction("Index", "Usuario", user);
+                }
+                else if (emple != null)
+                {
+                    FormsAuthentication.SetAuthCookie(emple.cedula_empleado, true);
+                    return RedirectToAction("IndexEm", "Empleados");
                 }
                 else
                 {
@@ -53,6 +61,7 @@ namespace ARCH_TF.Controllers
                 return RedirectToAction("Index", new { message = "Llene el formulario para poder iniciar sesión" });
             }
         }
+
 
         [Authorize]
         public ActionResult Logout()

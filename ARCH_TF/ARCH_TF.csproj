@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\estado_cocheController.cs" />
     <Compile Include="Controllers\form_registroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -393,8 +394,9 @@
     <Content Include="Views\estado_coche\Details.cshtml" />
     <Content Include="Views\estado_coche\Edit.cshtml" />
     <Content Include="Views\estado_coche\Index.cshtml" />
-    <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\form_registro\Create.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Empleados\IndexEm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
