@@ -19,9 +19,7 @@ namespace ARCH_TF.Controllers
         }
 
         public ActionResult About()
-        {
-            ViewBag.Message = "Actuar y cumplir su misión con equidad.";
-
+        { 
             return View();
         }
 
@@ -46,7 +44,7 @@ namespace ARCH_TF.Controllers
                 if (user != null)
                 {
                     FormsAuthentication.SetAuthCookie(user.email, true);
-                    return RedirectToAction("Index", "Usuario");
+                    return RedirectToAction("Index", "Usuario", user);
                 }
                 else if (emple != null)
                 {
