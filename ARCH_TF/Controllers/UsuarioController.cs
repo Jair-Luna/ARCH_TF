@@ -21,6 +21,20 @@ namespace ARCH_TF.Controllers
 
             return View(user);
         }
+        public ActionResult Solicitud()
+        {
+            var email = User.Identity.Name;
+            var user = db.usuario.FirstOrDefault(e => e.email == email);
 
+            return View(user);
+        }
+
+        public ActionResult Quejas()
+        {
+            var email = User.Identity.Name;
+            var user = db.usuario.FirstOrDefault(e => e.email == email);
+
+            return View(user);
+        }
     }
 }
