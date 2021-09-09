@@ -24,7 +24,15 @@
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <li>@Html.ActionLink("Inicio", "Index", "Usuario", null, new { @class = "nav-link" })</li>
+                            if (User.Identity.Name.Contains('@'))
+                            {
+                                <li>@Html.ActionLink("Inicio", "Index", "Usuario", null, new { @class = "nav-link" })</li>
+                            }
+                            else
+                            {
+                                <li>@Html.ActionLink("Inicio", "Index", "Empleados", null, new { @class = "nav-link" })</li>
+                            }
+
                         }
                         else
                         {
@@ -50,14 +58,7 @@
     <div class="container-fluid dropdown h-100 bg-black bg-opacity-10 back-img">
         <div class="container-fluid position-sticky p-0">
             @RenderBody()
-
         </div>
-        @*<hr />
-            <footer>
-                <p class="m-0">&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-            </footer>*@
-
-
     </div>
 
     <div class="position-relative">
