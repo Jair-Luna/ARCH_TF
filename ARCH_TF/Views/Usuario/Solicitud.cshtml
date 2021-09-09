@@ -5,6 +5,8 @@
 }
 
 <div class="container-fluid p-0 m-0">
+    
+
     <div class="row min-vh-100 flex-column flex-md-row">
         <aside class="col-12 col-md-3 col-xl-2 p-0 bg-dark ">
             <nav class="navbar navbar-expand-md navbar-dark bd-dark flex-md-column flex-row align-items-baseline py-2 text-center sticky-top ms-3" id="sidebar">
@@ -24,21 +26,46 @@
                         </li>
                     </ul>
                 </div>
+
             </nav>
+
         </aside>
+
         <main class="col px-0 flex-grow-1">
+
             <div class="container py-3">
+
                 <h1>@Html.DisplayFor(model => model.nombres)</h1>
 
                 @using (Html.BeginForm("CrearSolicitud", "Usuario", FormMethod.Post))
                 {
+
+
                     <div>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcion"></textarea>
-                        <input type="submit" name="Submit" id="Submit" value="Enviar" class="btn btn-dark" />
+
+                        <form class="row g-3 was-validated needs-validation" novalidate>
+
+                            <div class="mb-3">
+                                <label for="validationTextarea" class="form-label" style="font-size:x-large">Descripción de solicitud</label>
+                                <textarea class="form-control is-invalid" id="exampleFormControlTextarea1" placeholder="Campo obligatorio" required rows="3" name="descripcion"></textarea>
+                                <div class="mb-3"></div>
+                                <input type="submit" name="Submit" id="Submit" value="Enviar" class="btn btn-dark" />
+                            </div>
+
+                        </form>
                     </div>
                 }
             </div>
-        </main>
-    </div>
-</div>
+            <div class="container ">
 
+            </div>
+        </main>
+        <main class="col px-0 flex-grow-1">
+            <div class="m-md-5"></div>
+            <img src="~/Images/solicitud.png" class="rounded mx-auto d-block" alt="...">
+
+        </main>
+
+    </div>
+
+</div>

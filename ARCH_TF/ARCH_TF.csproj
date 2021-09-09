@@ -236,6 +236,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\background.jpg" />
+    <Content Include="Images\quejas.png" />
+    <Content Include="Images\solicitud.png" />
+    <Content Include="Images\temp.jpg" />
     <Content Include="Images\logo.png" />
     <Content Include="Models\DB_Hidrocarburos.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
