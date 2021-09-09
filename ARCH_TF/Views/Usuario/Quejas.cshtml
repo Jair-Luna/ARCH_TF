@@ -33,11 +33,25 @@
                 @using (Html.BeginForm("CrearQueja", "Usuario", FormMethod.Post))
                 {
                     <div>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcion"></textarea>
-                        <input type="submit" name="Submit" id="Submit" value="Enviar" class="btn btn-dark" />
+
+
+                        <form class="was-validated">
+                            <div class="mb-3">
+                                <label for="validationTextarea" class="form-label" style="font-size:x-large">Descripción de la queja</label>
+                                <textarea class="form-control is-invalid" id="exampleFormControlTextarea1" rows="3"  name="descripcion" placeholder="Campo obligatorio" required></textarea>
+
+                                <div class="mb-3"></div>
+                                <input type="submit" name="Submit" id="Submit" value="Enviar" class="btn btn-dark" />
+                            </div>
+                        </form>
                     </div>
                 }
             </div>
+        </main>
+        <main class="col px-0 flex-grow-1">
+            <div class="m-md-5"></div>
+            <img src="~/Images/quejas.png" class="rounded mx-auto d-block" alt="...">
+
         </main>
     </div>
 </div>
