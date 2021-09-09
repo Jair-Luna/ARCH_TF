@@ -49,7 +49,7 @@ namespace ARCH_TF.Controllers
                 else if (emple != null)
                 {
                     FormsAuthentication.SetAuthCookie(emple.cedula_empleado, true);
-                    return RedirectToAction("IndexEm", "Empleados");
+                    return RedirectToAction("Index", "Empleados", emple);
                 }
                 else
                 {

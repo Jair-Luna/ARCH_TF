@@ -9,7 +9,7 @@ namespace ARCH_TF.Controllers
     public class EmpleadosController : Controller
     {
         // GET: Empleados
-        public ActionResult IndexEm()
+        public ActionResult Index()
         {
             return View();
         }

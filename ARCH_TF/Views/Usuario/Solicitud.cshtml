@@ -29,6 +29,14 @@
         <main class="col px-0 flex-grow-1">
             <div class="container py-3">
                 <h1>@Html.DisplayFor(model => model.nombres)</h1>
+
+                @using (Html.BeginForm("CrearSolicitud", "Usuario", FormMethod.Post))
+                {
+                    <div>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcion"></textarea>
+                        <input type="submit" name="Submit" id="Submit" value="Enviar" class="btn btn-dark" />
+                    </div>
+                }
             </div>
         </main>
     </div>

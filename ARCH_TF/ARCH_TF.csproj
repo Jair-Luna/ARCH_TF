@@ -396,7 +396,7 @@
     <Content Include="Views\estado_coche\Index.cshtml" />
     <Content Include="Views\form_registro\Create.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
-    <Content Include="Views\Empleados\IndexEm.cshtml" />
+    <Content Include="Views\Empleados\Index.cshtml" />
     <Content Include="Views\Usuario\Solicitud.cshtml" />
     <Content Include="Views\Usuario\Quejas.cshtml" />
   </ItemGroup>
