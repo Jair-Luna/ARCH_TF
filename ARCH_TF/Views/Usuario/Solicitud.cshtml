@@ -28,7 +28,7 @@
         </aside>
         <main class="col px-0 flex-grow-1">
             <div class="container py-3">
-                <h1>@Html.DisplayFor(model => model.nombres)</h1>
+                <h1>@Html.DisplayFor(model => model.nombres) @Html.DisplayFor(model => model.apellido_paterno)</h1>
 
                 @using (Html.BeginForm("CrearSolicitud", "Usuario", FormMethod.Post))
                 {

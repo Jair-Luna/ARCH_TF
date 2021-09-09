@@ -26,20 +26,46 @@
                 </div>
             </nav>
         </aside>
+
         <main class="col px-0 flex-grow-1">
             <div class="container py-3">
-                <h1>@Html.DisplayFor(model => model.nombres)</h1>
+                <h1>@Html.DisplayFor(model => model.nombres) @Html.DisplayFor(model => model.apellido_paterno)</h1>
             </div>
 
             @{
                 if (!string.IsNullOrEmpty(ViewBag.Message))
                 {
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            @ViewBag.Message
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        @ViewBag.Message
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                 }
             }
+
+            <div class="ms-2 ps-3 container-fluid bg-white bg-opacity-75">
+                <div class="row fs-2">
+
+                    <div class="col fw-bold">Cédula:</div>
+                    <div class="col">@Html.DisplayFor(model => model.cedula_usuario)</div>
+                    <hr class="m-1"/>
+
+                    <div class="col fw-bold">Dirección:</div>
+                    <div class="col">@Html.DisplayFor(model => model.direccion)</div>
+                    <hr class="m-1" />
+
+                    <div class="col fw-bold">Teléfono:</div>
+                    <div class="col">@Html.DisplayFor(model => model.telefono)</div>
+                    <hr class="m-1" />
+
+                    <div class="col fw-bold">Tanques disponibles:</div>
+                    <div class="col">@Html.DisplayFor(model => model.num_tanques)</div>
+
+                </div>
+            </div>
+        </main>
+
+        <main class="col px-0 flex-grow-1">
+            <img src="~/Images/lupa.png" class="rounded mx-auto d-block m-md-5 img-fluid" alt="lupa"/>
         </main>
     </div>
 </div>
